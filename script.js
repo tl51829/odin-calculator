@@ -32,3 +32,13 @@ function operate(number1, operator, number2) {
 }
 
 let number1, operator, number2;
+const screen = document.getElementById("screen");
+const buttons = document.querySelectorAll("button");
+
+let display;
+buttons.forEach(button => {
+    button.addEventListener('click', e => {
+        display = button.textContent;
+        screen.textContent += display;
+    })
+})
