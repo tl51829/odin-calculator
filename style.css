@@ -1,35 +1,70 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#calculator, #screen, button {
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 5px;
+}
+
 #calculator {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    width: 350px;
-    height: 500px;
+    width: 340px;
+    height: 430px;
     padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: rgb(179, 178, 178);
 }
 
 #screen {
-    border: 1px solid black;
-    height: 100px;
+    height: 75px;
+    width: 295px;
     margin-bottom: 20px;
+    padding: 20px;
 }
 
 #buttons {
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button {
     height: 50px;
     width: 77.5px;
+    font-size: 18px;
+}
+
+#screen, button {
+    background-color: rgb(239, 237, 237);
 }
 
 #clearBtn, #equalsBtn, #pointBtn {
     width: 165px;
 }
 
-#screenLast, #screenCurrent {
-    height: 50px;
-    border: 1px solid black;
+#screenLast {
+    height: 19.5px;
+    margin-bottom: 15px;
+}
+
+#screenCurrent {
+    font-size: 30px;
+    height: 36.5px;
+}
+
+#clearBtn {
+    background-color: rgb(255, 170, 176);
+}
+
+#pointBtn {
+    background-color: rgb(112, 188, 255);
+}
+
+#equalsBtn {
+    background-color: rgb(101, 202, 169);
 }
