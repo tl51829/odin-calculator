@@ -28,3 +28,8 @@ button {
 #clearBtn, #equalsBtn, #pointBtn {
     width: 165px;
 }
+
+#screenLast, #screenCurrent {
+    height: 50px;
+    border: 1px solid black;
+}
