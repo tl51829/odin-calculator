@@ -1,0 +1,30 @@
+#calculator {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 350px;
+    height: 500px;
+    padding: 30px;
+}
+
+#screen {
+    border: 1px solid black;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+#buttons {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    height: 50px;
+    width: 77.5px;
+}
+
+#clearBtn, #equalsBtn, #pointBtn {
+    width: 165px;
+}

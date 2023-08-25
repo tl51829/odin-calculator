@@ -31,7 +31,7 @@ let number1 = null;
 let operator = null;
 let number2 = null;
 
-const screen = document.getElementById("screen");
+const screen = document.getElementById("screenCurrent");
 const buttons = document.querySelectorAll("button");
 const pointBtn = document.getElementById("pointBtn");
 
