@@ -33,6 +33,7 @@ let number2 = null;
 
 const screen = document.getElementById("screen");
 const buttons = document.querySelectorAll("button");
+const pointBtn = document.getElementById("pointBtn");
 
 let display;
 let clicked;
@@ -49,16 +50,20 @@ buttons.forEach(button => {
                 operator = null;
                 number1 = result;
                 number2 = null;
+                pointBtn.removeAttribute("disabled");
             }
-        } else if (clicked == "D") {
-            
         } else if (clicked == "C") {
-            
+            operator = null;
+            number1 = null;
+            operator = null;
+            number2 = null;
+            screen.textContent = '';
+
         } else if (!isNaN(clicked) || clicked == ".") {
             if (operator == null) {
-                (number1 == null) ? (number1 = clicked) : (number1 += clicked); 
+                (number1 == null) ? (number1 = clicked) : (clicked == ".") ? (number1 += clicked, pointBtn.setAttribute('disabled', '')) : (number1 += clicked); 
             } else {
-                (number2 == null) ? (number2 = clicked) : (number2 += clicked);          
+                (number2 == null) ? (number2 = clicked) : (clicked == ".") ? (number2 += clicked, pointBtn.setAttribute('disabled', '')) : (number2 += clicked); 
             }
         } else {
             if (number1 != null && number2 != null) {
@@ -68,10 +73,11 @@ buttons.forEach(button => {
                 number2 = null;
             }
             operator = clicked;
+            pointBtn.removeAttribute("disabled");
         } 
 
         display = button.textContent;
-        if (display != "=") {
+        if (display != "=" && display != "CLEAR" && display != "DELETE") {
             screen.textContent += display;
         }
     });
